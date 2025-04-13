@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str
     APP_NAME: str
 
-    @validator("environment")
+    @validator("ENVIRONMENT")
     def validate_environment(cls, value):
         envs = {"dev", "test", "prod"}
         if value not in envs:
